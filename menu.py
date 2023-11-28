@@ -22,33 +22,44 @@ while True:
                   'São perguntas simples, porém, capazes de adiantar o processo inicial de atendimento do paciente, reduzindo o tempo de espera e as filas nos postos de saúde.\n'
                   'Em casos emergenciais, o questionário também conterá informações como tipo sanguíneo, alergia a medicamentos, problemas cardíacos, cirurgias anteriores.\n'
                   'A ideia é manter essas informações com fácil acesso, porém somente por pessoas habilitadas. O tempo ganho com a ausência da demora ao acesso a essas informações pode salvar uma vida.')
-        case 2:                                                     # IMPLEMENTAÇÃO FUTURA DO QUESTIONÁRIO EM FORMA DE FUNÇÃO (executar_quiz())
-            print('')
+        case 2:  ########                              # IMPLEMENTAÇÃO DO QUESTIONÁRIO EM FORMA DE FUNÇÃO (executar_quiz())
+            functions.executar_quiz()
+            ########
         case 3:                                                     # IMPLEMENTAÇÃO DA CALCULADORA DE IMC EM FORMA DE FUNÇÃO (calcular_imc(altura, peso))
             print('---------- CALCULADORA DE IMC ----------\n'
                   'Vamos agora calcular seu IMC, sigua as instruções na tela.\n')
-            peso = float(input('Informe seu peso (em quilogramas, ex: 80): '))
-            altura = float(input('Informe sua altura (em metros, ex: 1.95): '))
 
-            imc = functions.calcular_imc(altura, peso)              # função com os parâmetros "altura" e "peso" que retorna o resultado do IMC.
+            while True:  ##############
+                try:
+                    peso = float(input('Informe seu peso (em quilogramas, ex: 80): '))
+                    altura = float(input('Informe sua altura (em metros, ex: 1.95): '))  ################
 
-            print(f'Seu IMC é de: {imc:.2f}')
+                    imc = functions.calcular_imc(altura,
+                                                 peso)  # função com os parâmetros "altura" e "peso" que retorna o resultado do IMC.     ##############
 
-            if imc < 17:
-                print('Você está muito abaixo do peso.')
-            elif 17 <= imc < 18.5:
-                print('Você está razoavelmente abaixo do peso.')
-            elif 18.5 <= imc < 25:
-                print('Você está com o peso normal.')
-            elif 25 <= imc < 30:
-                print('Você está acima do peso.')
-            elif 30 <= imc < 35:
-                print('Você está com obesidade de grau 1.')
-            elif 35 <= imc <= 40:
-                print('Você está com obesidade de grau 2.')
-            else:
-                print('Você está com obesidade de grau 3.')
+                    print(f'Seu IMC é de: {imc:.2f}')  ##############
 
+                    if imc < 17:  ####################
+                        print('Você está muito abaixo do peso.')
+                    elif 17 <= imc < 18.5:
+                        print('Você está razoavelmente abaixo do peso.')
+                    elif 18.5 <= imc < 25:
+                        print('Você está com o peso normal.')
+                    elif 25 <= imc < 30:
+                        print('Você está acima do peso.')
+                    elif 30 <= imc < 35:
+                        print('Você está com obesidade de grau 1.')
+                    elif 35 <= imc <= 40:
+                        print('Você está com obesidade de grau 2.')
+                    else:
+                        print('Você está com obesidade de grau 3.')
+
+                    break
+
+                except ValueError:
+                    print('Os valores devem ser compostos apenas por números.')
+
+                    ######################
         case 4: # MENU DE CADASTRO
             cad_log = int(input('---------- CADASTRAR-SE/LOGIN ----------\n'
                                 '1 - Cadastrar-se\n'
