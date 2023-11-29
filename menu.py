@@ -74,7 +74,6 @@ while True:
                         break
 
                     case 2:
-                        functions.realizar_login()
                         break
                     case 0:
                         break
