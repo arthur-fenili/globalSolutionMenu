@@ -107,3 +107,24 @@ def realizar_cadastro():               #SEGUNDO COMMIT#########
             case 2:
                 break
 
+def realizar_login():
+
+    while True:
+
+        if 'email' not in globals():
+            print('Você tem que realizar um cadastro primeiro.')
+            break
+
+        input_email = input('E-mail cadastrado: ')
+
+        input_senha = input('Senha: ')
+
+        if input_email == email and input_senha == senha:
+            print('Login realizado com sucesso!')
+            break
+        elif input_email != email:
+            print('E-mail incorreto, tente novamente.')
+        elif input_senha != senha:
+            print('Senha incorreta, tente novamente.')
+        elif input_email != email and input_senha != senha:
+            print('E-mail e senha incorretos, tente novamente.')
