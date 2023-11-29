@@ -61,11 +61,24 @@ while True:
 
                     ######################
         case 4: # MENU DE CADASTRO
-            cad_log = int(input('---------- CADASTRAR-SE/LOGIN ----------\n'
-                                '1 - Cadastrar-se\n'
-                                '2 - Login\n'
-                                '0 - VOLTAR\n'
-                                'Selecione uma opção (0 a 2): '))
+            while True:
+                cad_log = int(input('---------- CADASTRAR-SE/LOGIN ----------\n'
+                                    '1 - Cadastrar-se\n'
+                                    '2 - Login\n'
+                                    '0 - VOLTAR\n'
+                                    'Selecione uma opção (0 a 2): '))
+
+                match cad_log:
+                    case 1:
+                        functions.realizar_cadastro()
+                        break
+
+                    case 2:
+                        break
+                    case 0:
+                        break
+                    case _:
+                        print('Opção inválida, tente novamente.')
 
         case 0: # FINALIZADOR DO MENU
             print('Menu finalizado.')
