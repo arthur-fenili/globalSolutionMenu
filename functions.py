@@ -57,3 +57,53 @@ def executar_quiz(): #################
 
         else:
             print('Opção inválida. Tente novamente.') #####################
+
+def realizar_cadastro():               #SEGUNDO COMMIT#########
+
+    global nome_completo, email, senha, idade, cpf
+
+    print('Vamos realizar o seu cadastro no nosso sistema, siga as instruções na tela.\n'
+          'Digite "SAIR" a qualquer momento para cancelar o cadastro.')
+    while True:
+        nome_completo = input('Primeiro, infome seu nome completo.\n'
+                              'Resposta: ')
+
+        if nome_completo == 'SAIR':
+            print('Cadastro cancelado.')
+            break
+
+        cpf = input('Informe seu CPF (Ex: 123.321.999-00).\n'
+                    'Resposta: ')
+
+        if cpf == 'SAIR':
+            print('Cadastro cancelado.')
+            break
+
+        email = input('Qual e-mail deseja cadastrar?\n'
+                      'Resposta: ')
+
+        if email == 'SAIR':
+            print('Cadastro cancelado.')
+            break
+
+        senha = input('Por último, qual senha deseja cadastrar?\n'
+                      'Resposta: ')
+
+        if senha == 'SAIR':
+            print('Cadastro cancelado.')
+            break
+
+        resposta_cad = int(input(f'Seu nome é {nome_completo}\n'
+                                 f'CPF: {cpf}\n'
+                                 f'E-mail: {email}\n'
+                                 f'Senha: {senha}\n'
+                                 'Confirma? 1 - Sim / 2 - Não (Esta opção realizará o cadastro novamente).\n'
+                                 'Resposta: '))
+
+        match resposta_cad:
+            case 1:
+                print('Cadastro realizado com sucesso!')
+                break
+            case 2:
+                break
+
