@@ -52,4 +52,4 @@
   A ideia é manter essas informações em fácil acesso, porém somente por pessoas habilitadas. O tempo ganho com a ausência da demora de consulta a essas informações pode salvar uma vida.
 </p>
 
-<h4>Link do vídeo de apresentação do código fonte: </h4>
+<h4>Link do vídeo de apresentação do código fonte: <a href="https://youtu.be/juWXQTdDCgs" target="_blank"> >> Clique aqui! << </a></h4>
